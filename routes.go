@@ -39,7 +39,7 @@ func roomGET(c *gin.Context) {
 	if len(nick) > 13 {
 		nick = nick[0:12] + "..."
 	}
-	c.HTML(http.StatusOK, "room_login.templ.html", gin.H{
+	c.HTML(http.StatusOK, "index.html", gin.H{
 		"roomid":    roomid,
 		"nick":      nick,
 		"timestamp": time.Now().Unix(),
