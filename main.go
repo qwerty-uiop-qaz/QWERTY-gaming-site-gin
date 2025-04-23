@@ -33,7 +33,7 @@ func StartGin() {
 
 	router := gin.New()
 	router.Use(rateLimit, gin.Recovery())
-	router.LoadHTMLGlob("resources/*.templ.html")
+	router.LoadHTMLGlob("resources/*.html")
 	router.Static("/static", "resources/static")
 	router.GET("/", index)
 	router.GET("/room/:roomid", roomGET)
